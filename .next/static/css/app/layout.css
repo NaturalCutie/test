@@ -1,0 +1,219 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;600&display=swap");
+
+:root {
+  --bg-1: #f7f0e8;
+  --bg-2: #e2f3ff;
+  --ink: #1c1b19;
+  --muted: #5b5b5b;
+  --accent: #dc143c;
+  --accent-2: #2f80ed;
+  --card: #fff9f0;
+  --border: #1c1b19;
+  --shadow: 6px 6px 0 #1c1b19;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 122, 89, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(47, 128, 237, 0.18), transparent 35%),
+    linear-gradient(120deg, var(--bg-1), var(--bg-2));
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 18px 64px;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 24px;
+  gap: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-gap: 14px;
+  gap: 14px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 3.2vw, 3.6rem);
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-family: "Spline Sans Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border: 2px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--card);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: grid;
+  grid-gap: 16px;
+  gap: 16px;
+}
+
+.panel h2 {
+  font-size: 1.3rem;
+}
+
+.canvas-wrap {
+  background: #ffffff;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.canvas {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  cursor: crosshair;
+  background: #ffffff;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+.control {
+  display: grid;
+  grid-gap: 6px;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input[type="range"],
+input[type="color"] {
+  width: 100%;
+}
+
+button {
+  font-family: "Spline Sans Mono", ui-monospace, monospace;
+  border: 2px solid var(--border);
+  padding: 10px 12px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #1c1b19;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #1b120f;
+}
+
+button.secondary {
+  background: #ffe6d6;
+}
+
+.status {
+  font-family: "Spline Sans Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+  color: var(--muted);
+  min-height: 24px;
+}
+
+.guess {
+  font-size: 1.3rem;
+  background: #fff;
+  padding: 16px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.tips {
+  display: grid;
+  grid-gap: 8px;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.panel,
+.footer {
+  animation: floatIn 0.5s ease both;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 24px 14px 48px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
